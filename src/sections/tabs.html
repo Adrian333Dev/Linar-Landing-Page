@@ -1,0 +1,97 @@
+<section class="pt-18.5 pb-20 lg:pb-22.5 relative" x-data="{ featuresTab: 'tabOne' }">
+  <div class="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+    <div class="absolute top-0 -z-1">
+      <img class="dark:hidden" src="./images/shape/shape-dotted-light.svg" alt="Dotted Shape" />
+      <img class="hidden dark:block" src="./images/shape/shape-dotted-dark.svg" alt="Dotted Shape" />
+    </div>
+
+    <!-- Tab Menues Start -->
+    <div
+      class="animate_top border border-stroke dark:border-strokedark dark:bg-blacksection shadow-solid-5 dark:shadow-solid-6 bg-white rounded-[10px] flex flex-wrap md:flex-nowrap md:items-center justify-center lg:gap-7.5 xl:gap-12.5 mb-15 xl:mb-21.5"
+    >
+      <div
+        class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+        :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabOne' }"
+        @click.prevent="featuresTab = 'tabOne'"
+      >
+        <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+          <p class="text-black dark:text-white font-medium text-metatitle3">01</p>
+        </div>
+        <div class="lg:w-auto md:w-3/5">
+          <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Clean User Interface</h5>
+        </div>
+      </div>
+      <div
+        class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+        :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabTwo' }"
+        @click.prevent="featuresTab = 'tabTwo'"
+      >
+        <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+          <p class="text-black dark:text-white font-medium text-metatitle3">02</p>
+        </div>
+        <div class="lg:w-auto md:w-3/5">
+          <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Cloud Data Save Options</h5>
+        </div>
+      </div>
+      <div
+        class="relative cursor-pointer w-full md:w-auto border-b last:border-0 md:border-0 border-stroke dark:border-strokedark flex items-center gap-4 py-2 xl:py-5 px-6 xl:px-13.5"
+        :class="{ 'active before:w-full before:h-1 before:bg-primary before:absolute before:bottom-0 before:left-0 before:rounded-tl-[4px] before:rounded-tr-[4px]': featuresTab === 'tabThree' }"
+        @click.prevent="featuresTab = 'tabThree'"
+      >
+        <div class="w-12.5 h-12.5 rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection flex items-center justify-center">
+          <p class="text-black dark:text-white font-medium text-metatitle3">03</p>
+        </div>
+        <div class="lg:w-auto md:w-3/5">
+          <h5 class="text-black dark:text-white text-sm xl:text-regular font-medium">Management And Collaboration</h5>
+        </div>
+      </div>
+    </div>
+    <!-- Tab Menues End -->
+
+    <!-- Tab Content Start -->
+    <div class="animate_top mx-auto max-w-c-1154">
+      <div x-show="featuresTab === 'tabOne'">
+        <div class="flex items-center gap-8 lg:gap-19">
+          <div class="md:w-1/2">
+            <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Neat & Clean User Interface.</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+          </div>
+          <div class="hidden md:block md:w-1/2">
+            <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+            <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+          </div>
+        </div>
+      </div>
+
+      <div x-show="featuresTab === 'tabTwo'">
+        <div class="flex items-center gap-8 lg:gap-19">
+          <div class="md:w-1/2">
+            <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Cloud Data Save Options.</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+          </div>
+          <div class="hidden md:block md:w-1/2">
+            <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+            <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+          </div>
+        </div>
+      </div>
+
+      <div x-show="featuresTab === 'tabThree'">
+        <div class="flex items-center gap-8 lg:gap-19">
+          <div class="md:w-1/2">
+            <h2 class="text-black dark:text-white text-3xl xl:text-sectiontitle2 font-bold mb-7">Solid Has Management And Collaboration.</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum ultrices. Fusce consectetur le.</p>
+            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus sagittis. Nulla ligula nunc egestas ut.</p>
+          </div>
+          <div class="hidden md:block md:w-1/2">
+            <img src="./images/features/features-light-01.svg" alt="Features" class="dark:hidden" />
+            <img src="./images/features/features-dark-01.svg" alt="Features" class="hidden dark:block" />
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- Tab Content End -->
+  </div>
+</section>
